@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    ubuntu:
+        build: .
+        image: pwn-docker:1.4
+        ports: 
+            - "5561:22"
+        restart: unless-stopped
+        tty: true
