@@ -17,7 +17,7 @@ user.env :
 ```
 USER_ID=ID
 SUDO_PASSWORD=PASSWORD
-FILE__SUDO_PASSWORD=/path/file
+#FILE__SUDO_PASSWORD=/path/file
 
 ```
 
