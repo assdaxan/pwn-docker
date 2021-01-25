@@ -1,2 +1,3 @@
 # docker environment
 *.env
+config/*
