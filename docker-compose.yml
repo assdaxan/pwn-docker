@@ -5,7 +5,7 @@ services:
         build: .
         image: pwn-docker:1.5
         env_file:
-            - admin.env
+            - user.env
         ports: 
             - "5561:22"
         restart: unless-stopped
