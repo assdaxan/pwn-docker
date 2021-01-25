@@ -12,6 +12,11 @@ create_user() {
         echo "exists user account : " ${USER_ID}
     fi
 
+    if [ -n "${FILE__SUDO_PASSWORD}" ]; then
+        export SUDO_PASSWORD=$(cat ${FILE__SUDO_PASSWORD})
+        chmod 0660 ${FILE__SUDO_PASSWORD}
+    fi
+
     if [ -n "${SUDO_PASSWORD}" ]; then
         echo "setting up sudo access"
         if ! grep -q ${USER_ID} /etc/sudoers; then

@@ -8,5 +8,7 @@ services:
             - user.env
         ports: 
             - "5561:22"
+        volumes: 
+            - "./config:/config"
         restart: always
         tty: true
