@@ -9,6 +9,7 @@ pwnable에 사용 가능한 기본적인 도구를 포함한 도커 파일 입�
 |:---|:---|
 |USER_ID|사용자 아이디|
 |SUDO_PASSWORD|사용자 패스워드|
+
 user.env : 
 ```
 USER_ID=ID
