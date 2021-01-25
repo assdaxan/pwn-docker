@@ -8,5 +8,5 @@ services:
             - user.env
         ports: 
             - "5561:22"
-        restart: unless-stopped
+        restart: always
         tty: true
