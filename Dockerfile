@@ -39,13 +39,10 @@ RUN pip3 install    pwntools \
 
 RUN echo "set number\nset smartindent\nset shiftwidth=4\nsyntax on" >> /etc/vim/vimrc
 
-RUN useradd -m -s /bin/bash ubun
-USER ubun
-WORKDIR /home/ubun
+COPY ./peda-init.sh /peda-init.sh
+RUN chmod o+x /peda-init.sh
 
-RUN git clone https://github.com/longld/peda.git
-RUN git clone https://github.com/scwuaptx/Pwngdb.git
-RUN cp ~/Pwngdb/.gdbinit ~/
+COPY ./entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-USER root
-ENTRYPOINT service ssh start && bash
+ENTRYPOINT /entrypoint.sh

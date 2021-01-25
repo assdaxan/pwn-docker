@@ -3,7 +3,9 @@ version: "3"
 services:
     ubuntu:
         build: .
-        image: pwn-docker:1.4
+        image: pwn-docker:1.5
+        env_file:
+            - admin.env
         ports: 
             - "5561:22"
         restart: unless-stopped
