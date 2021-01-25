@@ -19,7 +19,7 @@ SUDO_PASSWORD=PASSWORD
 
 ### 기본 설치 모듈
 ---
-이 도커 파일은 아래 정의된 프로그램, 모듈이 설치됩니다.
+이 도커 파일은 아래 정의된 프로그램, 모듈이 설치됩니다. </br>
 만약 프로그램, 모듈을 추가/제거하기 위해서는 Dockerfile을 수정해야 합니다.
 ```
 RUN apt install -y  build-essential \
@@ -55,11 +55,12 @@ RUN pip3 install    pwntools \
 
 ### SSH 접속 포트
 ---
-위 도커는 외부 접속을 위해 5561번 포트를 개방하고 있습니다. 
+위 도커는 외부 접속을 위해 5561번 포트를 개방하고 있습니다. </br>
 만약 외부 접속을 원하지 않는다면 docker-compose.yml 내부에 정의된 ports 정보를 수정하십시오.
 ```
 0.0.0.0:5561 -> 22/tcp
 ```
+
 connect : 
 ```
 ssh [USER_ID]@[IP] -p 5561
@@ -68,6 +69,7 @@ ssh [USER_ID]@[IP] -p 5561
 ### 실행
 ---
 docker-compose를 이용하여 쉽게 실행할 수 있습니다.
+
 run : 
 ```
 docker-compose up -d
