@@ -3,7 +3,8 @@ FROM ubuntu:20.04
 ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN sed -ie 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
+RUN sed -ie 's/http:\/\/archive.ubuntu.com/https:\/\/mirror.kakao.com/g' /etc/apt/sources.list
+RUN sed -ie 's/http:\/\/security.ubuntu.com/https:\/\/mirror.kakao.com/g' /etc/apt/sources.list
 
 RUN dpkg --add-architecture i386
 RUN apt update && apt -y upgrade && apt -y autoremove
@@ -21,7 +22,8 @@ RUN apt install -y  build-essential \
                     openssh-server \
                     sudo \
                     curl \
-                    htop
+                    htop \
+                    dnsutile
 
 RUN apt install -y  gdb \
                     libc6-dbg \
