@@ -4,7 +4,7 @@ pwnable에 사용 가능한 기본적인 도구를 포함한 도커 파일 입�
 ### 환경변수
 ---
 사용자는 user.env 파일에 초기 사용자 정보를 정의해야 합니다. </br>
-패스워드를 정의할 수 있는 방법은 2가지이며, SUDO_PASSWORD, FILE__SUDO_PASSWORD 중 1개만 택해야 한다.
+패스워드를 정의할 수 있는 방법은 2가지이며, SUDO_PASSWORD, FILE__SUDO_PASSWORD 중 1개만 택해야 한다. </br>
 만약 FILE__SUDO_PASSWORD 변수를 사용하는 경우 docker-compose.yml에서 volumes에 패스워드가 저장된 폴더를 정의해줘야 한다.
 
 |변수|내용|
