@@ -7,7 +7,7 @@ services:
         env_file:
             - user.env
         ports: 
-            - "5561:22"
+            - "5562:22"
         volumes: 
             - "./config:/config"
         restart: always
